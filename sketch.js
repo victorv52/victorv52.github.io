@@ -30,13 +30,15 @@ function draw() {
   ellipse(400, 485, 60);
   endShape(CLOSE);
 
+let eyeMoveX = map(mouseX, 0, width, -15, 5);
+
   // eyes
   fill('white');
   ellipse(300, 420, 50, 50);
   ellipse(500, 420, 50, 50);
   fill('#111');
-  ellipse(300, 420, 15, 15);
-  ellipse(500, 420, 15, 15);
+  ellipse(300 + eyeMoveX, 420, 15, 15);
+  ellipse(500 + eyeMoveX, 420, 15, 15);
 
   // eye brow
   stroke('#1F0E03');
@@ -56,6 +58,6 @@ function draw() {
   fill(skin);
   ellipse(150, 450, 80, 100);
   ellipse(650, 450, 80, 100);
-  
+
   console.log("mouseX="+mouseX+", mouseY="+mouseY);
 }
